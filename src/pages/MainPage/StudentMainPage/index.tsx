@@ -1,11 +1,18 @@
 import React, { useState } from "react";
-import { IdcardOutlined, SearchOutlined } from "@ant-design/icons";
+import {
+  IdcardOutlined,
+  SearchOutlined,
+  BookOutlined,
+  CommentOutlined,
+} from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Layout, Menu, theme } from "antd";
 import ComposeHeader from "./components/ComposeHeader";
 import "./index.css";
-import StudentInfo from "./components/StudentInfo";
-import InfoSearch from "./components/InfoSearch";
+import StudentInfo from "./innerPages/StudentInfo";
+import MyCourse from "./innerPages/MyCourse";
+import CourseComment from "./innerPages/CourseComment";
+// import InfoSearch from "./components/InfoSearch";
 
 const { Content, Sider } = Layout;
 
@@ -54,12 +61,17 @@ function getItem(
 
 const items: MenuItem[] = [
   getItem("个人信息", "1", <IdcardOutlined />),
-  getItem("通讯录查询", "2", <SearchOutlined />),
+  getItem("我的课程", "2", <BookOutlined />),
+  getItem("课程评价", "3", <CommentOutlined />),
 ];
 
-const InnerContent: React.ReactNode[] = [<StudentInfo />, <InfoSearch />];
+const InnerContent: React.ReactNode[] = [
+  <StudentInfo />,
+  <MyCourse />,
+  <CourseComment />,
+];
 
-const UserMainPage: React.FC = () => {
+const StudentMainPage: React.FC = () => {
   const [selectedKey, setSelectedkey] = useState(0);
   const [collapsed, setCollapsed] = useState(false);
   const {
@@ -106,4 +118,4 @@ const UserMainPage: React.FC = () => {
   );
 };
 
-export default UserMainPage;
+export default StudentMainPage;

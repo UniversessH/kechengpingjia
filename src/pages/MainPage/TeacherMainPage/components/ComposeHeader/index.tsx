@@ -28,7 +28,7 @@ const ComposeHeader: React.FC = () => {
           }}
         />
         <span style={{ color: "#f0f0f0", fontSize: "18px" }}>
-          学生通讯录管理系统
+          学生通讯录管理系统-教师端
         </span>
       </div>
       {/* <Menu theme="dark" mode="horizontal" /> */}

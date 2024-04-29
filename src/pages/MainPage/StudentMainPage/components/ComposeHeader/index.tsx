@@ -26,7 +26,7 @@ const ComposeHeader: React.FC = () => {
             marginRight: "10px",
           }}
         />
-        <span style={{ color: "#fff", fontSize: "18px" }}>学生通讯录系统</span>
+        <span style={{ color: "#fff", fontSize: "18px" }}>课程评价系统</span>
       </div>
       {/* <Menu theme="dark" mode="horizontal" /> */}
 
